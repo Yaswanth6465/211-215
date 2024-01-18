@@ -1,0 +1,222 @@
+<html>
+<head> 
+    <link rel="stylesheet" href="style.css">
+    <body> 
+    <div class="p1">
+         storage_of_hemoglobin;;<br><br>
+ logic:<br><br>
+ /* exit if the hemoglobin value is invalid */<br>
+ if hemoglobin is not number then<br>
+ conclude false;<br>
+ endif;<br><br>
+ /* exit if there hemoglobin is <=13.3 <br>
+ if hemoglobin <= 13.3 then  <br> 
+ conclude false;<br>
+ endif;<br><br>
+ /* exit if Erythropoietin order cannot be found */<br>
+ if (epo_order is null) then<br>
+ conclude false;<br>
+ endif;<br>
+ /* send an alert */<br>
+ conclude true;<br><br>
+ ;;<br>
+ action:<br>
+ write “The patient’s hemoglobin level on (“ ||time of potassium|| “) is” ||hemoglo-<br>bin|| “. The patient is currently on Erythropoietin dosage. As per clinical guideline,<br>
+it is recommended to discontinue the Erythropoietin dosage.”;<br><br>
+ ;;<br>
+ urgency: 90;;<br>
+end:<br><br>
+ARDEN syntax-based decision support systems are widely in use. Since this syntax<br>
+became an ANSI standard, it was embraced by several medical information system<br>
+vendors to provide decision support capabilities. Vendors who have developed ARDEN<br>
+compliant applications include: Cerner Corporation, Healthvision, McKesson, SMS, and<br>
+Micromedex.<br><hr>
+        </div>
+        <h2>ASBRU</h2>
+       <div class="line">
+            <hr>
+        </div> 
+        <div class="p2">
+        Asbru is a knowledge representation language to capture the clinical guideline and<br>
+protocols as time oriented skeletal plans. The development of Asbru was part of the<br>
+Asgaard project developed by the Technical University of Vienna, Stanford Medical<br>
+Informatics, University of Newcastle, and University of Vienna. The goal of the Asgaard<br>
+project is to develop task specific problem solving methods that perform medical decision<br>
+support and critiquing tasks (Seyfang, Miksch, & Marcos, 2002).<br>
+Asbru is a difficult language to be understood by a physician and hence a graphical<br>
+knowledge acquisition tool is used to gather the knowledge or guideline and then output<br>
+that into Asbru syntax behind the scenes for computer interpretation. The graphical tool<br>
+used is called Protégé. The Asbru output created by Protégé can be shared with other<br>
+medical decision support systems that are compliant with Asbru format.<br>
+<br></div>
+<h2>EON</h2>  
+       <div class="line">
+            <hr></div>
+        
+        <div class="p3">
+EON is a clinical guideline modeling system developed by Stanford University for<br>
+creating guideline-based decision modules. The EON guideline model system was<br>
+developed to address the problem of modeling clinical guidelines and protocols to<br>
+provide patient specific decision support. This modeling system allows creating a<br>
+knowledge engineering environment for easy encoding of clinical guidelines and<br>
+protocols. EON guideline model allows association of conditional goals with guidelines.<br>
+It provides three criteria languages to allow the medical practitioners to use and express<br>
+their decision making complexities: a simple object oriented language that medical<br>
+practitioners can use to encode the decision criteria, a temporal query type language, and<br>
+a predicate logic.<br>
+EON also uses Protégé as the medical knowledge acquisition tool to help medical<br>
+practitioners provide medical decision criteria. The EON language is generated at the<br>
+back end by the Protégé tool. This code is platform independent and can be shared<br>
+between decision support systems that are EON compliant.<br>
+EON is widely used in European countries and one of the major decision support system<br>
+that uses EON is PRODIGY. The decision support system ATHENA, which provides<br>
+hypertension related advices, also uses the EON guideline model as its decision support<br>
+architecture.<br>
+             </div>
+        <h2>GEM (Guideline Elements Model)</h2>
+        <div class="line">
+            <hr>
+        </div>
+            
+ <div class="p4">  
+   GEM, an XML- (Extensible Markup Language) based guideline document model was<br>
+introduced in 2000 by Yale center of medical informatics. This initiative is intended to<br>
+facilitate the translation of medical guideline documents to a standard computer inter-<br>pretable format. The key difference between the other techniques and GEM is that it uses<br>
+the industry standard XML for knowledge transfer purposes. GEM’s XML hierarchy is<br>
+</div><hr>
+        <br>
+       
+        <div class="p1">
+       made up of 100 discrete tags and 9 major branches. These branches are identity,<br>
+developer, intended audience, target population, method of development, testing,<br>
+review plan, and knowledge components (Shiffman, Karras, Agrawal, Chen, Marenco, &<br>
+Nath, 2000). Several of these branches appear identical to the slots of ARDEN syntax.<br>
+While the goal of all of these knowledge transfer techniques is the same, they differ in<br>
+their implementation strategies.<br>
+The strength of this model is that it encodes both the recommendations and adequate<br>
+information about the guideline recommendations, including its reason and quality of<br>
+evidence (Shiffman et al., 2000). GEM was accepted as an ASTM standard in 2002.<br>
+Knowledge extraction in GEM is a simple document markup rather than a programming<br>
+task. GEM uses a knowledge acquisition tool called GEM Cutter to interactively gather<br>
+he knowledge data and store it in a XML format.<br>
+        </div>
+        <h2>GLARE (Guide Line Acquisition Representation and<br>
+Execution)</h2>
+        <div class="line">
+            <hr>
+        </div>
+        <div class="p1">
+        GLARE is a medical domain independent guideline model system for acquiring, repre-<br>senting, and executing clinical guidelines. GLARE was introduced in 1997 by the<br>
+Dipartimento di Informatica, Universita del Piemonto Orientale , Alexandria, Italy. This<br>
+system boasts a modular architecture with acquisition and execution modules. The<br>
+GLARE Knowledge representation language is designed to satisfy both the complexity<br>
+and expressive rules. The format is limited but focused set of primitives. It consists of<br>
+plans and atomic actions that can be queries, decisions, work actions, and conclusions<br>
+(Open Clinical-Glare, 2004).<br>
+GLARE knowledge acquisition system is an easy to use graphical user interface with<br>
+syntactic and semantic verifications to check the formulated guidelines. Artificial<br>
+intelligence temporal reasoning techniques are applied to weed out inconsistencies. The<br>
+GLARE system goes one step ahead and also incorporates a decision support system<br>
+for knowledge execution purposes. GLARE system has been tested for applicability in<br>
+medical domains like bladder cancer, reflux esophagitis, and heart failure at the Laboratorio<br>
+di Informatica Clinica, Torino, Italy. The commercial version of this product is still under<br>
+development.<br></div>
+        <h2><center>Future Trends</center></h2>
+         <div class="line">
+            <hr>
+        </div>
+        <div class="p1">
+       While medical decision support systems have been around for the past four decades, its<br>
+usage among clinicians is still questionable. Several variables play a role in a success of<br>
+a medical decision support system and it is important to address these to move ahead<br>
+from where we stand now. Issues like physician reluctance, intimidating systems,<br>
+proprietary interests, local practice, technological factors, and outdated knowledgebase<br>
+are all limiting factors for the growth and acceptance of computer-based decision support<br>
+</div><hr>
+        <div class="p1">
+systems. In addition to these limitations, the decision making functions are no longer<br>
+limited to the physicians. The patients, healthcare administrators, insurance carriers,<br>
+healthcare professionals, policy makers, risk analysts, and the government at large are<br>
+all stakeholders in this medical decision making process. It will be extremely limiting to<br>
+tie down these requirements to local proprietary computer systems.<br>
+While the field of medicine pioneered the knowledge sharing techniques among decision<br>
+support systems, the introduction of several sharing standards segmented market as a<br>
+net result defeated the purpose of such standard. The growth, availability, and acces-<br>sibility of the Internet opened the door for development of a new model for sharing<br>
+medical knowledge and decision support systems across networks. Internet-based<br>
+decision support systems with focus on a particular medical domain will be prevalent in<br>
+the future.<br>
+The various knowledge sharing standards are naturally meeting a common merger. For<br>
+example, several medical guideline modeling languages are using a common interface for<br>
+knowledge acquisition purposes. Protégé is the most commonly used tool to acquire the<br>
+knowledge and then formulate the output in various modeling languages. This converg-<br>ing trend will begin to happen at the knowledge representation and knowledge execution<br>
+modules as well. This will give raise to a true acceptance of a common knowledge sharing<br>
+technique.<br>
+The next key area of medical decision support systems is the unique characteristics of<br>
+its users. Great medical decision support systems when seldom used solves no purpose.<br>
+Most users get intimidated by the complexities and challenges posed by the user<br>
+interface. While medical decision making is not a simple process, the decision support<br>
+systems should help reducing the complexity and not increasing them. Past studies<br>
+indicate that the complexity of customizing the knowledge or a simple rule forces the<br>
+physicians to refrain form using the system. Training clinicians in usage of complex<br>
+decision support process is a worthy investment. The benefits of the usage of medical<br>
+decision support systems outweigh the costs incurred in development, implementation,<br>
+and maintenance of such products.<br>
+        </div>
+        <h2><center>Chapter Summary</center></h2>
+         <div class="line">
+            <hr>
+        </div>
+        <div class="p1">
+            Medical decision support systems, when used along with the clinical information<br>
+systems at the point of care can improve the quality of care provided. Despite evidence<br>
+of the benefits of decision support, and despite endorsement by a national patient safety<br>
+panel (Kohn, Corrigan & Donaldson, 2000), computerized clinical decision support has<br>
+not achieved wide diffusion. A recent survey found that such systems were used in less<br>
+than five percent of all healthcare facilities (Wong, Legnini, Whitmore, & Taylor, 2000).<br>
+When the user interface, availability, and accessibility issues of the medical decision<br>
+support systems are properly addressed, the usage of the systems will grow multi fold!<br>
+When such medical decision support systems are blended into the day-to-day practice<br>
+workflow, then these systems are destined to succeed!<br>
+ </div><hr>
+        <h2><center>References</center></h2>
+         <div class="line">
+            <hr>
+        </div>
+    <div class="p1">
+        Beatty, P.C.W. (1999). User attitudes to computer-based decision support in anesthesia<br>
+and critical care: A preliminary survey. <em>The Internet Journal of Anesthesiology,<br>
+3</em>(1).<br><br>
+Brenner, W., Zarnekow, R. & Wittig, H. (1998). <em>Intelligent software agents: Foundations<br>
+and applications</em>. New York: Springer-Verlag.<br><br>
+Buchanan, B.G. & Shortliffe, E.H. (1984). <em>Rule-based expert systems: The MYCIN<br>
+experiments of the Stanford heuristic programming project</em>. Reading, MA:<br>
+Addison-Wesley.<br><br>
+Camms, J.D. & Evans, J.R. (1996). <em>Management science: Modeling, analysis and<br>
+interpretation</em>, Cincinnati, OH: South-Western.<br><br>
+Dojat, M., Pachet, F., Guessoum, Z., Touchard, D., Harf, A., & Brochard, L. (1997).<br>
+NeoGanesh: A working system for the automated control of assisted ventilation<br>
+in ICUs. <em>Artificial Intelligence in Medicine, 11</em>, 97-117.<br><br>
+Field, M.J. & Lohr, K.B. (1992).<em> Guidelines for clinical practice: From development to<br>
+use</em>. Washington, DC: National Academy Press.<br><br>
+Frenster, J.H. (1989). <em>Expert systems and open systems in medical artificial intelligence</em>.<br>
+Presented at the Congress on Medical Informatics. May 11-13.<br><br>
+Gorry, G.A. & Morton, S. (1971). A framework for management information systems,<br>
+<em>Sloan Management Review, 13</em>(1).<br><br>
+Grimshaw, J.M. & Russell, I.T. (1993). Effect of clinical guidelines on a medical practice:<br>
+A systematic review of rigourous evaluations. <em>Lancet</em>, 342(8883).<br><br>
+Hastie, R. (2001). Problems for judgment and decision making. <em>Ann Rev Psychol, 52</em>, 653-<br>
+683.<br><br>
+Hripcsak, G., Pryor, A.T. & Wigertz, O.B. (1995). Transferring medical knowledge bases<br>
+between different HIS environments. In H.U. Prokosch & J. Dudeck (Eds.), <em>Hospital<br>
+information systems: Design and development characteristics, impact and future<br>
+architectures</em>. Amsterdam: Elsevier Science B.V.<br><br>
+Hunt, D.L., Haynes, R.B., Hanna, S.E. & Smith, K. (1998). Effects of computer-based<br>
+clinical decision support systems on physician performance and patient outcomes:<br>
+a systematic review. <em>JAMA, 280</em>(15).<br><br>
+Johnsons, M.E., Langton, K.B., Haynes, R.B. & Mathieu, A. (1994). Effects of computer<br>
+based clinical decision support systems on clinician performance and patient<br>
+outcome. <em>Ann Intern Med., 120</em>(2).<br><br>
+Kohn, L.T., Corrigan, J. & Donaldson. M.S. (2000). <em>To err is human: Building a safer<br>
+health system</em>. Washington, DC: National Academic Press.<br><br>
+Lobach, D.F. & Hammond, E. (1997). Computerized decision support based on a clinical<br>
+practice guideline improves compliance with care standards. <em>Am J Med., 102</em>(1).</div><hr>
